@@ -32,6 +32,11 @@ io.on('connection', client => {
         console.log("message: ", message);
         io.sockets.emit("messageBox", message)
     })
+
+    client.on('channelGP-control', function (messageControl) {
+        console.log("messageControl: ", messageControl); // {0,0,0,0}
+        io.sockets.emit("nodemcu01", messageControl)
+    })
     
     // setInterval(()=> {
     //     io.sockets.emit("count",i++)
