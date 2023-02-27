@@ -11,9 +11,6 @@ const io = require("socket.io")(http, {
     }
 });
 
-var i = 0;
-
-
 
 
 
